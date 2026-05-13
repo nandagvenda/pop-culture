@@ -103,3 +103,20 @@ footer .text-muted {
     color: var(--text-gray);
 }
 
+audio {
+    filter: invert(100%) hue-rotate(270deg) brightness(1.5); 
+    height: 30px;
+}
+
+.carousel-item img {
+    filter: grayscale(30%) brightness(0.7); 
+}
+
+.carousel-caption h5 {
+    background: var(--neon-purple);
+    display: inline-block;
+    padding: 5px 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 15px var(--neon-purple);
+}
+

@@ -9,17 +9,25 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body class="bg-dark text-white">
+<body>
 
-    <nav class="navbar navbar-expand-lg border-bottom sticky-top">
-        <div class="container">
-            <a class="navbar-brand fw-bold" href="index.html">Cultura musical</a>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                </ul>
-            </div>
+     <nav class="navbar">
+            <a class="navbar-brand fw-bold tit-menu text-white" href="index.html">Cultura musical</a>
+
+        <!-- MENU HAMBÚRGUER -->
+        <div class="menu-toggle" id="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
+
+        <!-- LINKS -->
+        <ul class="nav-links" id="nav-links">
+            <li><a href="1960s.html">Anos 60</a></li>
+            <li><a href="1970s.html">Anos 70</a></li>
+            <li><a href="1980s.html">Anos 80</a></li>
+            <li><a href="1990s.html">Anos 90</a></li>
+        </ul>
     </nav>
 
     <div id="carouselArtistas" class="carousel slide shadow-lg" data-bs-ride="carousel">
@@ -217,48 +225,65 @@
             </div>
         </section>
 
-        <h3 class="text-center mb-4">Hits Inesquecíveis</h3>
+        <h3 class="text-center mb-4">Hits Inesquecíveis dos Anos 90</h3>
+
         <div class="row g-4">
+
             <div class="col-12 col-md-4">
                 <div class="card p-3 text-center h-100">
-                    <h5 class="card-title">Here Comes The Sun</h5>
-                    <p>The Beatles</p>
-                    <audio controls class="w-100 mt-2">
-                        <source src="audio/60s/hey-jude.mp3" type="audio/mpeg">
-                        Seu navegador não suporta áudio.
-                    </audio>
+                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/6b2oQwSGFkzsMtQruIWm2p"
+                        width="100%" height="152" frameborder="0" allowfullscreen=""
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+                    </iframe>
                 </div>
             </div>
 
             <div class="col-12 col-md-4">
                 <div class="card p-3 text-center h-100">
-                    <h5 class="card-title">I Got You (I Feel Good)</h5>
-                    <p>James Brown</p>
-                    <audio controls class="w-100 mt-2">
-                        <source src="" type="audio/mpeg">
-                    </audio>
+                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/3MjUtNVVq3C8Fn0MP3zhXa"
+                        width="100%" height="152" frameborder="0" allowfullscreen=""
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+                    </iframe>
                 </div>
             </div>
 
             <div class="col-12 col-md-4">
                 <div class="card p-3 text-center h-100">
-                    <h5 class="card-title">I Can't Get No</h5>
-                    <p>Rolling Stones</p>
-                    <audio controls class="w-100 mt-2">
-                        <source src="" type="audio/mpeg">
-                    </audio>
+                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4cOdK2wGLETKBW3PvgPWqT"
+                        width="100%" height="152" frameborder="0" allowfullscreen=""
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+                    </iframe>
                 </div>
             </div>
 
             <div class="col-12 col-md-4">
                 <div class="card p-3 text-center h-100">
-                    <h5 class="card-title">Knockin'On Heaveen's Door</h5>
-                    <p>Bob Dylan</p>
-                    <audio controls class="w-100 mt-2">
-                        <source src="" type="audio/mpeg">
-                    </audio>
+                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1Je1IMUlBXcx1Fz0WE7oPT"
+                        width="100%" height="152" frameborder="0" allowfullscreen=""
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+                    </iframe>
                 </div>
             </div>
+
+            <div class="col-12 col-md-4">
+                <div class="card p-3 text-center h-100">
+                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/0ofHAoxe9vBkTCp2UQIavz"
+                        width="100%" height="152" frameborder="0" allowfullscreen=""
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+                    </iframe>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4">
+                <div class="card p-3 text-center h-100">
+                    <iframe style="border-radius:12px"
+                        src="https://open.spotify.com/embed/track/47BBI51FKFwOMlIiX6m8ya?utm_source=generator" width="100%"
+                        height="152" frameborder="0" allowfullscreen=""
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+                    </iframe>
+                </div>
+            </div>
+
         </div>
     </main>
 
@@ -269,6 +294,14 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+      <script>
+        const menuToggle = document.getElementById("menu-toggle");
+        const navLinks = document.getElementById("nav-links");
+
+        menuToggle.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+        });
+    </script>
 </body>
 
 </html>

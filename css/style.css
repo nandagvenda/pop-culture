@@ -12,6 +12,10 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+p {
+    text-align: left;
+}
+
 .navbar {
     background-color: var(--bg-dark) !important;
     border-bottom: 1px solid var(--neon-purple) !important;
@@ -101,6 +105,12 @@ footer .text-muted {
     background-color: var(--bg-dark) !important;
     border-top: 1px solid var(--neon-purple) !important;
     color: var(--text-gray);
+}
+
+footer p {
+  text-align: center;
+  margin: 0;
+  border: none;
 }
 
 .carousel-item img {

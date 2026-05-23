@@ -2,13 +2,13 @@ const perguntas = [
     {
         pergunta: "Se você pudesse herdar uma relíquia tecnológica do passado para usar hoje, qual seria?",
         opcoes: [
-            { texto: "Uma Jukebox clássica iluminada por neon para decorar a sala", decada: "1950" },
-            { texto: "Uma câmera analógica Super 8 para filmar a vida em tons quentes", decada: "1960" },
-            { texto: "Um toca-discos portátil em formato de maleta bem retrô", decada: "1970" },
-            { texto: "Um toca-fitas Walkman amarelo daqueles bem esportivos", decada: "1980" },
-            { texto: "Um Discman que pula a música se você andar muito rápido", decada: "1990" },
-            { texto: "Um iPod Classic de rodinha lotado de arquivos MP3", decada: "2000" },
             { texto: "Um celular de teclado QWERTY físico (estilo BlackBerry) ou os primeiros iPods Touch", decada: "2010"},
+            { texto: "Uma Jukebox clássica iluminada por neon para decorar a sala", decada: "1950" },
+            { texto: "Um toca-discos portátil em formato de maleta bem retrô", decada: "1970" },
+            { texto: "Um iPod Classic de rodinha lotado de arquivos MP3", decada: "2000" },
+            { texto: "Um toca-fitas Walkman amarelo daqueles bem esportivos", decada: "1980" },
+            { texto: "Uma câmera analógica Super 8 para filmar a vida em tons quentes", decada: "1960" },
+            { texto: "Um Discman que pula a música se você andar muito rápido", decada: "1990" },
             { texto: "Eu prefiro o minimalismo: só o meu celular e fones sem fio atuais", decada: "2020" }
         ]
     },
@@ -28,40 +28,41 @@ const perguntas = [
     {
         pergunta: "Escolha uma forma clássica de passar o tempo ou um passatempo icônico:",
         opcoes: [
-            { texto: "Ir ao cinema drive-in assistir a um filme de suspense dentro do carro", decada: "1950" },
             { texto: "Se reunir com amigos em um gramado para tocar violão e conversar", decada: "1960" },
-            { texto: "Passar a tarde patinando em uma pista de patinação com globos espelhados", decada: "1970" },
-            { texto: "Tentar quebrar o recorde de pontuação na máquina de Pinball do bairro", decada: "1980" },
             { texto: "Passar na locadora de fitas de vídeo para escolher os filmes do fim de semana", decada: "1990" },
+            { texto: "Passar a tarde patinando em uma pista de patinação com globos espelhados", decada: "1970" },
+            { texto: "Maratonar uma série inteira em um único dia fazendo um 'cine em casa'", decada: "2020" },
+            { texto: "Tentar quebrar o recorde de pontuação na máquina de Pinball do bairro", decada: "1980" },
+            { texto: "Ir ao cinema drive-in assistir a um filme de suspense dentro do carro", decada: "1950" },
             { texto: "Ficar horas escolhendo o subnick perfeito e o plano de fundo do bate-papo", decada: "2000" },
-            { texto: "Passar a tarde jogando Flappy Bird no celular ou personalizando o feed do Instagram com bordas brancas", decada: "2010"},
-            { texto: "Maratonar uma série inteira em um único dia fazendo um 'cine em casa'", decada: "2020" }
+            { texto: "Passar a tarde jogando Flappy Bird no celular ou personalizando o feed do Instagram com bordas brancas", decada: "2010"}
         ]
     },
     {
         pergunta: "Se você ganhasse uma viagem no tempo para um evento cultural, para onde iria?",
         opcoes: [
+            { texto: "Para a pista de um festival eletrônico de 2012 ouvindo o auge do EDM e do Pop de rádio", decada: "2010"},
             { texto: "Para a plateia de um programa de auditório de rádio ao vivo", decada: "1950" },
             { texto: "Para um festival histórico de três dias de paz, lama e muita música livre", decada: "1960" },
-            { texto: "Para uma pista lotada de Nova York dançar sob um enorme globo de espelhos", decada: "1970" },
-            { texto: "Para a inauguração de uma grande loja de fliperamas ou o primeiro dia da MTV no ar", decada: "1980" },
-            { texto: "Para um festival alternativo de rock de garagem ou um show de boyband dos anos 90", decada: "1990" },
             { texto: "Para um show pop icônico cheio de coreografias sincronizadas e roupas jeans", decada: "2000" },
-            { texto: "Para a pista de um festival eletrônico de 2012 ouvindo o auge do EDM e do Pop de rádio", decada: "2010"},
-            { texto: "Para um festival moderno cheio de palcos interativos, telões de LED e pulseiras luminosas", decada: "2020" }
+            { texto: "Para uma pista lotada de Nova York dançar sob um enorme globo de espelhos", decada: "1970" },
+            { texto: "Para um festival moderno cheio de palcos interativos, telões de LED e pulseiras luminosas", decada: "2020" },
+            { texto: "Para a inauguração de uma grande loja de fliperamas ou o primeiro dia da MTV no ar", decada: "1980" },
+            { texto: "Para um festival alternativo de rock de garagem ou um show de boyband dos anos 90", decada: "1990" }
+            
         ]
     },
     {
         pergunta: "Qual dessas atitudes mais combina com o seu jeito de ser no dia a dia?",
         opcoes: [
-            { texto: "Romântico(a) à moda antiga, aprecio a elegância e as tradições clássicas", decada: "1950" },
             { texto: "Questionador(a) e idealista, gosto de pensar fora da caixa e lutar por mudanças", decada: "1960" },
+            { texto: "Prático(a) e multitarefa, faço tudo pelo celular, crio conteúdos e consumo tudo muito rápido", decada: "2020" },
             { texto: "Good vibes e expressivo(a), gosto de liberdade e de me destacar pelo estilo", decada: "1970" },
-            { texto: "Nostálgico(a) e enérgico(a), amo tudo que envolve cultura pop, cores e videogames", decada: "1980" },
-            { texto: "Descontraído(a) e autêntico(a), prefiro as coisas simples, reais e sem muita frescura", decada: "1990" },
             { texto: "Entusiasta da tecnologia, adoro acompanhar tendências e criar comunidades online", decada: "2000" },
-            { texto: "Ligado(a) em cultura pop de transição, vivi a febre das sagas literárias no cinema e gosto de registrar tudo com fotos estéticas", decada: "2010"},
-            { texto: "Prático(a) e multitarefa, faço tudo pelo celular, crio conteúdos e consumo tudo muito rápido", decada: "2020" }
+            { texto: "Nostálgico(a) e enérgico(a), amo tudo que envolve cultura pop, cores e videogames", decada: "1980" },
+            { texto: "Romântico(a) à moda antiga, aprecio a elegância e as tradições clássicas", decada: "1950" },
+            { texto: "Descontraído(a) e autêntico(a), prefiro as coisas simples, reais e sem muita frescura", decada: "1990" },
+            { texto: "Ligado(a) em cultura pop de transição, vivi a febre das sagas literárias no cinema e gosto de registrar tudo com fotos estéticas", decada: "2010"}
         ]
     }
 ];

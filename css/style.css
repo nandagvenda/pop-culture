@@ -23,28 +23,16 @@ h3 {
 /*CABEÇALHO*/
 
 .navbar {
-    width: 100%;
     background: var(--bg-dark);
     padding: 15px 30px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    position: relative;
     z-index: 1000;
-}
-
-.navbar {
-    width: 100%;
-    background: var(--bg-dark);
-    padding: 20px 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
 }
 
 .tit-menu:hover {
     color: var(--neon-purple) !important;
+    text-shadow: 0 0 2px var(--neon-purple);
 }
 
 .menu-toggle {
@@ -57,7 +45,7 @@ h3 {
 
 .menu-toggle span {
     width: 70%;
-    height: 3px;
+    height: 3.5px;
     background: white;
     border-radius: 5px;
 }
@@ -78,13 +66,12 @@ h3 {
     gap: 15px;
 }
 
-/* QUANDO ABRIR */
 .nav-links.active {
     display: flex;
 }
 
 .nav-links a {
-    color: white;
+    color: #fff;
     text-decoration: none;
     font-size: 1rem;
 }
@@ -168,8 +155,7 @@ h3 {
 
 /*RODAPÉ*/
 
-footer,
-footer .text-muted {
+footer {
     background-color: var(--bg-dark) !important;
     border-top: 1px solid var(--neon-purple) !important;
     color: var(--text-gray);

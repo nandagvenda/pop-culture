@@ -4,8 +4,8 @@
 
 :root {
     --bg-dark: #121212;
-    --bt-card: #51425f;
-    --neon-purple: #a651eb;
+    --bg-card: #1e1e1e;
+    --neon-purple: #5a3b6a;
     --text-gray: #cfc5c5;
 }
 
@@ -15,86 +15,97 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-h2,
-h3 {
+h1 {
+    font-family: "Sixtyfour", sans-serif;
+    padding: 20px;
+}
+
+h2, h3{
     color: #a98ea9;
 }
 
 /*CABEÇALHO*/
 
-.navbar {
-    background: var(--bg-dark);
-    padding: 15px 30px;
-    display: flex;
-    justify-content: space-between;
-    z-index: 1000;
+.navbar{
+    width:100%;
+    background:var(--bg-dark);
+    padding:15px 30px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:relative;
+    z-index:1000;
+}
+
+.navbar{
+    width:100%;
+    background:var(--bg-dark);
+    padding:20px 30px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:relative;
 }
 
 .tit-menu:hover {
     color: var(--neon-purple) !important;
-    text-shadow: 0 0 2px var(--neon-purple);
 }
 
-.menu-toggle {
-    width: 35px;
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    cursor: pointer;
+.menu-toggle{
+    width:35px;
+    display:flex;
+    flex-direction:column;
+    gap:6px;
+    cursor:pointer;
 }
 
-.menu-toggle span {
-    width: 70%;
-    height: 3.5px;
-    background: white;
-    border-radius: 5px;
+.menu-toggle span{
+    width:70%;
+    height:3px;
+    background:white;
+    border-radius:5px;
 }
 
 /* MENU ESCONDIDO */
-
-.nav-links {
-    position: absolute;
-    top: 60px;
-    right: 0;
-    width: 100%;
-    background: var(--bg-dark);
-    list-style: none;
-    display: none;
-    flex-direction: column;
-    align-items: center;
+.nav-links{
+    position:absolute;
+    top:60px;
+    right:0;
+    width:100%;
+    background:var(--bg-dark);
+    list-style:none;
+    display:none;
+    flex-direction:column;
+    align-items:center;
     padding: 25px 0;
-    gap: 15px;
+    gap:15px;
 }
 
-.nav-links.active {
-    display: flex;
+/* QUANDO ABRIR */
+.nav-links.active{
+    display:flex;
 }
 
-.nav-links a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1rem;
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    font-size:1rem;
 }
 
 /*INDEX*/
 
 .hero-section {
     padding: 60px 0;
+    border-bottom: 1px solid #333;
 }
 
 .hero-section p {
-    color: var(--text-gray);
+    color: var(--text-gray) !important;
 }
 
 .hero-section h1 {
     color: var(--neon-purple);
-    font-family: 'Sixtyfour', cursive;
-    padding: 20px;
-}
-
-.container {
-    max-width: 90vw;
-    margin: 3rem auto;
+    text-shadow: 0 0 10px var(--neon-purple);
 }
 
 .card {
@@ -103,13 +114,13 @@ h3 {
     border-radius: 15px;
     color: #fff !important;
     overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
     max-width: 100%;
     margin-bottom: 20px;
 }
 
 .card:hover {
-    transform: translateY(-10px) scale(1.02);
+    transform: translateY(-10px) scale(1.02); 
     box-shadow: 0 0 20px rgba(188, 19, 254, 0.4);
     border-color: var(--neon-purple) !important;
 }
@@ -118,44 +129,46 @@ h3 {
     height: 250px;
     width: 100%;
     object-fit: cover;
-    background-color: #2a2a2a;
+    background-color: #2a2a2a; 
 }
 
 .card-text {
     color: var(--text-gray) !important;
 }
 
+
 .decade-badge {
     position: absolute;
     top: 15px;
     right: 15px;
-    background: var(--bt-card);
+    background: var(--neon-purple);
     color: white;
     padding: 5px 15px;
     border-radius: 20px;
     font-weight: bold;
-    box-shadow: 0 0 10px var(--bt-card);
+    box-shadow: 0 0 10px var(--neon-purple);
     z-index: 10;
 }
 
-.btn {
-    background-color: transparent;
+.btn-dark {
+    background-color: transparent !important;
     border: 2px solid var(--neon-purple) !important;
-    color: #ffffff;
+    color: var(--neon-purple) !important;
     font-weight: bold;
     transition: all 0.3s ease;
 }
 
-.btn:hover {
+.btn-dark:hover {
     background-color: var(--neon-purple) !important;
-    color: #fff !important;
+    color: white !important;
     transform: scale(1.05);
-    box-shadow: 0 0 10px var(--neon-purple);
+    box-shadow: 0 0 15px var(--neon-purple);
 }
 
 /*RODAPÉ*/
 
-footer {
+footer,
+footer .text-muted {
     background-color: var(--bg-dark) !important;
     border-top: 1px solid var(--neon-purple) !important;
     color: var(--text-gray);

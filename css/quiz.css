@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sixtyfour&display=swap');
+
+/*1. GERAL*/
+:root {
+    --bg-dark: #121212;
+    --bg-card: #51425f; /* Ajustado para bater com seu padrão --bt-card */
+    --neon-purple: #a651eb;
+    --text-gray: #cfc5c5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 2. CABEÇALHO & MENU HAMBÚRGUER*/
+.navbar {
+    width: 100% !important;
+    background: var(--bg-dark) !important;
+    padding: 15px 30px !important;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    position: relative;
+    z-index: 1000;
+}
+
+.navbar-brand.tit-menu {
+    color: #FFFFFF !important;
+    text-decoration: none !important;
+    font-weight: bold;
+    transition: all 0.2s;
+}
+
+.tit-menu:hover {
+    color: var(--neon-purple) !important;
+    text-shadow: 0 0 2px var(--neon-purple);
+}
+
+.menu-toggle {
+    width: 35px;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 6px !important;
+    cursor: pointer !important;
+}
+
+.menu-toggle span {
+    display: block !important;
+    width: 70% !important;
+    height: 3.5px !important;
+    background: white !important;
+    border-radius: 5px !important;
+}
+
+.nav-links {
+    position: absolute !important;
+    top: 60px !important;
+    right: 0 !important;
+    width: 100% !important;
+    background: var(--bg-dark) !important;
+    list-style: none !important;
+    display: none !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    padding: 25px 0 !important;
+    gap: 15px !important;
+    z-index: 999;
+    border-bottom: 1px solid rgba(166, 81, 235, 0.2);
+}
+
+.nav-links.active {
+    display: flex !important;
+}
+
+.nav-links a {
+    color: #fff !important;
+    text-decoration: none !important;
+    font-size: 1rem !important;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: var(--neon-purple) !important;
+}
+
+/*3. quiz*/
+.container {
+    max-width: 650px;
+    width: 90vw;
+    margin: auto 20px !important; 
+    background-color: #1a1a1e;
+    padding: 40px;
+    border-radius: 15px;
+    border: 1px solid #333;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+}
+
+h2#pergunta {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-bottom: 30px;
+    line-height: 1.4;
+}
+
+.opcoes-group {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.btn-opcao {
+    background-color: rgba(81, 66, 95, 0.2); 
+    color: var(--text-gray);
+    border: 2px solid rgba(166, 81, 235, 0.4);
+    padding: 16px 24px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.3s ease;
+}
+
+.btn-opcao:hover {
+    background-color: var(--neon-purple);
+    color: #ffffff;
+    border-color: var(--neon-purple);
+    transform: translateX(5px);
+    box-shadow: 0 0 15px rgba(188, 19, 254, 0.3);
+}
+
+/*4. tela resultado quiz */
+#resultado-container h2 {
+    color: var(--text-gray);
+}
+
+#resultado-container h1 {
+    font-size: 3rem;
+    color: var(--neon-purple);
+    margin: 20px 0;
+    text-shadow: 0 0 10px rgba(166, 81, 235, 0.5);
+}
+
+#resultado-texto {
+    color: var(--text-gray);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.btn-reiniciar {
+    background-color: transparent;
+    border: 2px solid var(--neon-purple);
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    padding: 12px 30px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-reiniciar:hover {
+    background-color: var(--neon-purple);
+    transform: scale(1.05);
+    box-shadow: 0 0 10px var(--neon-purple);
+}

@@ -132,7 +132,7 @@ function mostrarResultado() {
 
     const btnVisitar = document.getElementById("btn-visitar-era");
     btnVisitar.onclick = () => {
-        window.location.href = paginasDecadas[decadaVencedora];
+        globalThis.location.href = paginasDecadas[decadaVencedora];
     };
 
 }

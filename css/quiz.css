@@ -1,106 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sixtyfour&display=swap');
-
-/*1. GERAL*/
-:root {
-    --bg-dark: #121212;
-    --bg-card: #51425f; /* Ajustado para bater com seu padrão --bt-card */
-    --neon-purple: #a651eb;
-    --text-gray: #cfc5c5;
-}
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    background-color: var(--bg-dark);
-    color: #ffffff;
-    font-family: 'Poppins', sans-serif;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-/* 2. CABEÇALHO & MENU HAMBÚRGUER*/
-.navbar {
-    width: 100% !important;
-    background: var(--bg-dark) !important;
-    padding: 15px 30px !important;
-    display: flex !important;
-    flex-direction: row !important;
-    justify-content: space-between !important;
-    align-items: center !important;
-    position: relative;
-    z-index: 1000;
-}
-
-.navbar-brand.tit-menu {
-    color: #FFFFFF !important;
-    text-decoration: none !important;
-    font-weight: bold;
-    transition: all 0.2s;
-}
-
-.tit-menu:hover {
-    color: var(--neon-purple) !important;
-    text-shadow: 0 0 2px var(--neon-purple);
-}
-
-.menu-toggle {
-    width: 35px;
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 6px !important;
-    cursor: pointer !important;
-}
-
-.menu-toggle span {
-    display: block !important;
-    width: 70% !important;
-    height: 3.5px !important;
-    background: white !important;
-    border-radius: 5px !important;
-}
-
-.nav-links {
-    position: absolute !important;
-    top: 60px !important;
-    right: 0 !important;
-    width: 100% !important;
-    background: var(--bg-dark) !important;
-    list-style: none !important;
-    display: none !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    padding: 25px 0 !important;
-    gap: 15px !important;
-    z-index: 999;
-    border-bottom: 1px solid rgba(166, 81, 235, 0.2);
-}
-
-.nav-links.active {
-    display: flex !important;
-}
-
-.nav-links a {
-    color: #fff !important;
-    text-decoration: none !important;
-    font-size: 1rem !important;
-    transition: color 0.2s;
-}
-
-.nav-links a:hover {
-    color: var(--neon-purple) !important;
-}
-
-/*3. quiz*/
 .container {
-    max-width: 650px;
-    width: 90vw;
-    margin: auto 20px !important; 
     background-color: #1a1a1e;
     padding: 40px;
     border-radius: 15px;

@@ -102,7 +102,7 @@ function mostrarResultado() {
     document.getElementById("quiz-container").style.display = "none";
     document.getElementById("resultado-container").style.display = "block";
 
-    let decadaVencedora = Object.keys(pontuacao).reduce((a, b) => pontuacao[a] > pontuacao[b] ? a : b);
+    let decadaVencedora = Object.keys(pontuacao).reduce((a, b) => pontuacao[a] > pontuacao[b] ? a : b, Object.keys(pontuacao)[0] || "");
 
     document.getElementById("resultado-decada").innerText = `Anos ${decadaVencedora}!`;
     

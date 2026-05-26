@@ -1,0 +1,18 @@
+name: continous-deployment
+run-name: Deploy do site
+on:
+  pull request:
+    branches:
+      main
+  jobs:
+    deploy:
+      name: Deploy
+      runs-on: ubuntu-latest
+
+      steps:
+        name: checkout repository
+          uses:actions/checkout@v3
+          with:
+            fetch-depth: 0
+
+            #dockerhub

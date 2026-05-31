@@ -1,0 +1,23 @@
+{
+  "name": "pop-culture",
+  "version": "1.0.0",
+  "description": "",
+  "main": "quiz.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nandagvenda/pop-culture.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nandagvenda/pop-culture/issues"
+  },
+  "homepage": "https://github.com/nandagvenda/pop-culture#readme",
+  "devDependencies": {
+    "cypress": "^15.15.0"
+  }
+}

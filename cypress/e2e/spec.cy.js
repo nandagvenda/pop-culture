@@ -1,21 +1,26 @@
-describe('Pop Culture site', () => {
+describe('site Pop Culture', () => {
 
-  it('carrega a página', () => {
+  it('usuário navega pelo site com sucesso', () => {
+
+    // 1. abre o site
     cy.visit('https://pop-culture.azurewebsites.net')
+
+    // 2. valida que carregou
     cy.get('body').should('be.visible')
-  })
 
-  it('tem título', () => {
-    cy.visit('https://pop-culture.azurewebsites.net')
-    cy.title().should('not.be.empty')
-  })
+    // 3. valida que existe conteúdo principal
+    cy.contains('body', 'Pop').should('exist')
 
-  it('imagens não estão quebradas', () => {
-    cy.visit('https://pop-culture.azurewebsites.net')
+    // 4. clica em um botão (ajuste o texto se precisar)
+    cy.get('button').first().click()
+
+    // 5. verifica se houve mudança de página ou ação
+    cy.url().should('not.eq', 'https://pop-culture.azurewebsites.net')
 
     cy.get('img').each(($img) => {
-      expect($img[0].naturalWidth).to.be.greaterThan(0)
-    })
+  expect($img[0].naturalWidth).to.be.greaterThan(0)
+})
+
   })
 
 })

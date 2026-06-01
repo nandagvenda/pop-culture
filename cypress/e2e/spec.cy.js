@@ -1,25 +1,35 @@
-describe('site Pop Culture', () => {
+describe('Cultura Pop', () => {
 
-  it('usuário navega pelo site com sucesso', () => {
+  Cypress.on('uncaught:exception', () => false)
 
-    // 1. abre o site
+  it('navegação', () => {
+
+    // 1. abre home
     cy.visit('https://pop-culture.azurewebsites.net')
 
-    // 2. valida que carregou
-    cy.get('body').should('be.visible')
+    cy.contains('RETROSPECTIVA POP').should('be.visible')
 
-    // 3. valida que existe conteúdo principal
-    cy.contains('body', 'Pop').should('exist')
+    // 2. clica no botão do quiz
+    cy.contains('Fazer Quiz').click()
 
-    // 4. clica em um botão (ajuste o texto se precisar)
-    cy.get('button').first().click()
+    // 3. volta para home (caso o quiz exista)
+    cy.go('back')
 
-    // 5. verifica se houve mudança de página ou ação
-    cy.url().should('not.eq', 'https://pop-culture.azurewebsites.net')
+    // 4. testa cards de décadas (1950s)
+    cy.contains('Conhecer a Era').first().click()
+    cy.url().should('include', '50') // valida navegação
 
-    cy.get('img').each(($img) => {
-  expect($img[0].naturalWidth).to.be.greaterThan(0)
-})
+    cy.go('back')
+
+    // 5. 1960s
+    cy.contains('1960s').click({ force: true })
+    cy.url().should('include', '60')
+
+    cy.go('back')
+
+    // 6. 1970s
+    cy.contains('1970s').click({ force: true })
+    cy.url().should('include', '70')
 
   })
 

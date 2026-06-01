@@ -1,11 +1,7 @@
 const { defineConfig } = require("cypress");
 
-module.exports = defineConfig({
-  allowCypressEnv: false,
-
+export default {
   e2e: {
-    setupNodeEvents(on, config) {
-      // implement node event listeners here
-    },
-  },
-});
+    baseUrl: 'https://pop-culture.azurewebsites.net'
+  }
+}

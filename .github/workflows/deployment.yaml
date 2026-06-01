@@ -1,6 +1,5 @@
 name: continuous-deployment
 
-
 run-name: Deploy do site
 
 on:
@@ -40,26 +39,28 @@ jobs:
           publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
           images: jub0rges/pop-culture:latest
 
+
   integration-tests:
+    name: test-e2e
+    runs-on: ubuntu-latest
+    needs: deploy
 
-          name: test-e2e
-          runs-on: ubuntu-latest
-          needs: deploy
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-          steps:
-            - name: Checkout repository
-              uses: actions/checkout@v3
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
 
-            - name: Setup Node.js
-              uses: actions/setup-node@v3
-              with:
-                node-version: '20'
+      - name: Install dependencies
+        run: npm ci
 
-            - name: Install dependencies
-              run: npm install
-
-            - name: Cypress Run (Azure)
-              uses: cypress-io/github-action@v6
-              with:
-                browser: electron
-                spec: cypress/e2e/spec.cy.js
+      - name: Cypress E2E Tests (Azure)
+        uses: cypress-io/github-action@v6
+        with:
+          browser: electron
+          spec: cypress/e2e/spec.cy.js
+          wait-on: https://pop-culture.azurewebsites.net
+          wait-on-timeout: 120

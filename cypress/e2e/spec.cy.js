@@ -1,5 +1,5 @@
 describe('template spec', () => {
   it('passes', () => {
-    cy.visit('pop-culture.azurewebsites.net')
+    cy.visit('https://pop-culture.azurewebsites.net')
   })
 })

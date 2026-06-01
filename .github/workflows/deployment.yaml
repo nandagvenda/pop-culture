@@ -58,7 +58,6 @@ jobs:
 
       - name: Install packages
         run: |
-          cd integration-tests
           npm install
 
       - name: Run Cypress e2e tests

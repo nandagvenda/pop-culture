@@ -58,6 +58,10 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '20'
+          
+      - name: Start server 
+        run: | 
+          npx http-server . -p 5500 & sleep 10
 
       - name: Install packages
         run: |

@@ -65,4 +65,4 @@ jobs:
               with:
                 browser: electron
                 wait-on: https://pop-culture.azurewebsites.net
-                wait-on-timeout: 200
+                wait-on-timeout: 60000

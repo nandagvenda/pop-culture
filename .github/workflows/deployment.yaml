@@ -30,14 +30,14 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: jub0rges/pop-culture:latest
+          tags: jub0rges/pop-culture:${{ github.sha }}
 
       - name: Azure Deploy
         uses: azure/webapps-deploy@v2
         with:
           app-name: pop-culture
           publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
-          images: jub0rges/pop-culture:latest
+          images: jub0rges/pop-culture:${{ github.sha }}
 
 
   integration-tests:

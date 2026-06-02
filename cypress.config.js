@@ -1,7 +1,7 @@
 import { defineConfig } from "cypress";
 
-export default {
+export default defineConfig ({
   e2e: {
     baseUrl: 'https://pop-culture.azurewebsites.net'
   }
-}
+});
